@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "218855473584",
+    "project_id": "pocketsync-notes",
+    "storage_bucket": "pocketsync-notes.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218855473584:android:1aeaffc0f96b0d94a9d675",
+        "android_client_info": {
+          "package_name": "com.pocketsync.pocketsync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbEY-C8pjn2hcgwa7g-SPeQmBhMjOO4fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

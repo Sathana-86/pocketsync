@@ -1,0 +1,97 @@
+===========================================
+  NoteSync - Offline-First Notes App
+  RUN INSTRUCTIONS
+===========================================
+
+REQUIREMENTS:
+-------------
+- Flutter SDK (>=3.0.0) - https://flutter.dev/docs/get-started/install
+- Android Studio / VS Code
+- Android Emulator or Physical Device
+- Firebase Account (free)
+
+QUICK SETUP (5 minutes):
+------------------------
+
+1. EXTRACT THE ZIP
+   Extract pocketsync_submission.zip to any folder
+
+2. OPEN IN TERMINAL
+   cd pocketsync
+
+3. GET DEPENDENCIES
+   flutter pub get
+
+4. RUN THE APP
+   flutter run
+
+
+
+============
+TESTING OFFLINE FEATURES
+============
+
+TEST 1: Offline Add Note
+------------------------
+1. Enable Airplane mode on device
+2. Open app and sign in (or sign up)
+3. Tap + button
+4. Add note "Test Offline"
+5. ✅ Note appears instantly
+6. Go to Sync Queue tab
+7. ✅ Shows "Pending (1)"
+
+TEST 2: Offline Like Note
+-------------------------
+1. Stay in Airplane mode
+2. Tap heart icon on any note
+3. ✅ Heart turns red instantly
+4. Check Sync Queue → ✅ Like action appears
+
+TEST 3: Online Sync
+-------------------
+1. Disable Airplane mode
+2. Go to Sync Queue tab
+3. Tap "Retry All" button
+4. ✅ Queue becomes 0
+5. ✅ Check Firebase Console → Data appears
+
+============
+TROUBLESHOOTING
+============
+
+ISSUE: "flutter: command not found"
+SOLUTION: Add Flutter to PATH or use full path
+
+ISSUE: Queue always shows 0
+SOLUTION: Make sure you add notes while in Airplane mode
+
+ISSUE: Firebase not connecting
+SOLUTION: Check google-services.json is in android/app/
+
+ISSUE: Dark theme icons not visible
+SOLUTION: App uses fixed accent color #7F77DD
+
+============
+PROJECT STRUCTURE
+============
+
+pocketsync/
+├── lib/
+│   ├── core/
+│   │   ├── models/         (Note, SyncAction models)
+│   │   ├── providers/      (Riverpod providers)
+│   │   ├── repositories/   (Firebase + Hive logic)
+│   │   ├── services/       (Sync service with retries)
+│   │   └── theme/          (Dark/Light theme)
+│   └── presentation/
+│       └── screens/        (All UI screens)
+├── android/                (Android config)
+├── pubspec.yaml            (Dependencies)
+└── README.md               (Full documentation)
+
+============
+CONTACT
+============
+
+For any issues, refer to README.md or VERIFICATION_EVIDENCE.md
